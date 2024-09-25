@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="ad.size" content="width=300,height=600">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Spin the Wheel</title>
+</head>
+<body>
+    <div class="main">
+        <div class="frame1">
+            <div class="controls-container" style="display: none;">
+                <h3 id="headline">Insert Names Here</h3>
+                <small id="subheader">(separated by commas or new lines) <span id="counter"></span></small>
+                <textarea id="names" rows="10" cols="40">RED, GREEN, BLUE, PINK, YELLOW</textarea>   <!-- <button id="spin">Spin The Wheel</button> -->
+                <button id="remove">Remove Winner</button>
+            </div>
+            <div id="wheel"></div>
+            <div class="button-div">
+                <button id="spin">Spin The Wheel</button>
+            </div>
+            <p class="spinValue" id="spinValue"></p>
+        </div>    
+        <div class="frame2">
+            <form id="myForm" class="form-container">
+                <h2>Please fill up the details</h2>
+                <!-- <label for="name">Name:</label> -->
+                <input type="text" id="Name" placeholder="Name" name="Name" required>
+    
+                <!-- <label for="email">Email:</label> -->
+                <input type="email" id="Email" name="Email" placeholder="Email" required>
+                <!-- <input type="hidden" id="SpinResult" name="SpinResult"> -->
+                <div class="button-div2">
+                    <button type="submit" id="formbutton">Submit</button>
+                </div>
+            </form>
+            <p id="finalSubmit" class="finalSubmit"><br>Successfully submitted it.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event){
+            event.preventDefault(); 
+            
+            var Name = document.getElementById("Name").value;
+            
+            var messageElement = document.getElementById("finalSubmit");
+            messageElement.textContent = Name + "\n Successfully Submitted";
+        });
+    </script>
+    
+</body>
+</html>

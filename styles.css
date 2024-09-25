@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+body,
+textarea,
+button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  .main{
+    width: 300px;
+    height: 600px;
+    background: #2d5578;
+    position: relative;
+  }
+
+.controls-container {
+    background-color: white;
+    padding: 40px;
+}
+
+#subheader {
+    display: block;
+    margin-bottom: 10px;
+}
+
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+}
+.button-div {
+    display: flex;
+    justify-content: center;
+    padding-top: 45px;
+}
+button {
+    font-weight: bold;
+    background-color: #027bc7;
+    border: none;
+    font-size: 14px;
+    color: white;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    &:nth-of-type(2) {
+        background-color: #ca0d30;
+        float: right;
+    }
+}
+
+#wheel {
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+
+    &:after {
+        content: "";
+        background: #000000;
+        border: 2px solid white;
+        position: absolute;
+        top: -7px;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+        margin-left: -7px;
+        transform: rotate(45deg);
+    }
+}
+
+#counter {
+    float: right;
+}
+
+.frame2 {
+    display: none;
+    position: absolute;
+}
+.form-container {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 23px;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+#formbutton {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+.button-div2 {
+    display: flex;
+    justify-content: center;
+}
+.finalSubmit {
+    color: #dcef0c;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 25px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.msgSubmit {
+    opacity: 1 !important;
+}
+
+.spinValue{
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 25px;
+}
